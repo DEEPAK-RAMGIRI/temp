@@ -5,7 +5,7 @@ def decodeways(index):
     if index == len(string): return 1
     elif string[index] == "0":return 0
     total = decodeways(index + 1)
-    if index + 2 < len(string) and 10 <= int(string[index:  index + 2]) <= 26:
+    if index + 1 < len(string) and 10 <= int(string[index:  index + 2]) <= 26:
         total += decodeways(index + 2)
     return total 
 # print(decodeways(0))
